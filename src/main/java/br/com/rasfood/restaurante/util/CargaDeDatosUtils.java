@@ -48,7 +48,7 @@ public class CargaDeDatosUtils {
 		cardapioDao.cadastrar(salmao);
 		cardapioDao.cadastrar(saladaDeCove);
 		cardapioDao.cadastrar(pudin);
-		entityManager.getTransaction().commit();
+		entityManager.flush();
 		entityManager.clear();
 
 	}

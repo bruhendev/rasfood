@@ -2,7 +2,9 @@ package br.com.rasfood.restaurante.entity;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,24 +19,32 @@ public class OrdensCardapio {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Ordem ordem;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Cardapio cardapio;
 
-	private BigDecimal valor;
+	@Column(name = "valor_de_registro")
+	private BigDecimal valorDeResgistro;
 
 	private Integer quantidade;
 
 	public OrdensCardapio() {
 	}
 
-	public OrdensCardapio(Ordem ordem, Cardapio cardapio, BigDecimal valor, Integer quantidade) {
-		this.ordem = ordem;
+	public OrdensCardapio(Cardapio cardapio, Integer quantidade) {
 		this.cardapio = cardapio;
-		this.valor = valor;
 		this.quantidade = quantidade;
+		this.valorDeResgistro = cardapio.getValor();
+	}
+
+	public BigDecimal getValorDeResgistro() {
+		return valorDeResgistro;
+	}
+
+	public void setValorDeResgistro(BigDecimal valorDeResgistro) {
+		this.valorDeResgistro = valorDeResgistro;
 	}
 
 	public Integer getId() {
@@ -61,14 +71,6 @@ public class OrdensCardapio {
 		this.cardapio = cardapio;
 	}
 
-	public BigDecimal getValor() {
-		return valor;
-	}
-
-	public void setValor(BigDecimal valor) {
-		this.valor = valor;
-	}
-
 	public Integer getQuantidade() {
 		return quantidade;
 	}
@@ -79,8 +81,9 @@ public class OrdensCardapio {
 
 	@Override
 	public String toString() {
-		return "OrdensCardapio [id=" + id + ", ordem=" + ordem + ", cardapio=" + cardapio + ", valor=" + valor
+		return "OrdensCardapio [id=" + id + ", cardapio=" + cardapio + ", valorDeResgistro=" + valorDeResgistro
 				+ ", quantidade=" + quantidade + "]";
 	}
 
+	
 }
