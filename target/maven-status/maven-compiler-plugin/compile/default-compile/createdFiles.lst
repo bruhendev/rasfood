@@ -1,0 +1,15 @@
+br/com/rasfood/restaurante/util/JPAUtil.class
+br/com/rasfood/restaurante/service/teste/CardapioService.class
+br/com/rasfood/restaurante/entity/Ordem.class
+br/com/rasfood/restaurante/entity/OrdensCardapio.class
+br/com/rasfood/restaurante/entity/Categoria.class
+br/com/rasfood/restaurante/entity/Cliente.class
+br/com/rasfood/restaurante/entity/Cardapio.class
+br/com/rasfood/restaurante/vo/ItensPrincipaisVo.class
+br/com/rasfood/restaurante/dao/OrdemDao.class
+br/com/rasfood/restaurante/entity/Endereco.class
+br/com/rasfood/restaurante/dao/ClienteDao.class
+br/com/rasfood/restaurante/service/teste/OrdemService.class
+br/com/rasfood/restaurante/dao/CategoriaDao.class
+br/com/rasfood/restaurante/dao/CardapioDao.class
+br/com/rasfood/restaurante/util/CargaDeDatosUtils.class

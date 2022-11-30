@@ -33,4 +33,11 @@ public class ClienteDao {
 	public void remover(final Cliente cliente) {
 		this.entityManager.remove(cliente);
 	}
+
+	public List<Cliente> consultarPorNOme(final String nome) {
+		String jpql = "select c from Cliente c where upper(c.nome) like upper(:nome) ";
+		return this.entityManager.createQuery(jpql, Cliente.class)
+				.setParameter("nome", "%" + nome + "%")
+				.getResultList();
+	}
 }

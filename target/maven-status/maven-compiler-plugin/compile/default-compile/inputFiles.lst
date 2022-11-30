@@ -1,0 +1,15 @@
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/entity/Cardapio.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/entity/Cliente.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/vo/ItensPrincipaisVo.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/dao/CategoriaDao.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/util/CargaDeDatosUtils.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/entity/OrdensCardapio.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/service/teste/CardapioService.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/entity/Endereco.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/entity/Ordem.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/dao/ClienteDao.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/dao/CardapioDao.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/dao/OrdemDao.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/util/JPAUtil.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/entity/Categoria.java
+/home/bruno/ProjetosJava/rasfood/src/main/java/br/com/rasfood/restaurante/service/teste/OrdemService.java

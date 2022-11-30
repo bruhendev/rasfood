@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 
 import br.com.rasfood.restaurante.dao.CardapioDao;
 import br.com.rasfood.restaurante.dao.ClienteDao;
+import br.com.rasfood.restaurante.dao.EnderecoDao;
 import br.com.rasfood.restaurante.dao.OrdemDao;
 import br.com.rasfood.restaurante.entity.Cliente;
 import br.com.rasfood.restaurante.entity.Endereco;
@@ -26,16 +27,18 @@ public class OrdemService {
 		Endereco endereco = new Endereco("00000000", "Rua Tal 255", "sem complemento", "Pará", "Belem");
 		Cliente felipe = new Cliente("00665423490", "Felipe Silva Andrade");
 		felipe.addEndereco(endereco);
-		;
+		
 		Ordem newOrdem = new Ordem(felipe);
 		newOrdem.addOrdensCardapio(new OrdensCardapio(cardapioDao.consultarPorId(1), 2));
 
 		clienteDao.cadastrar(felipe);
 		ordemDao.cadastrar(newOrdem);
 
-		Ordem ordem = ordemDao.joinFetchCliente(1);
+		EnderecoDao enderecoDao = new EnderecoDao(entityManager);
 		
-		System.out.println(ordem.getCliente().getNome());
+		System.out.println(enderecoDao.consultarClientes(null,null , "Rua Tal 255"));
+
+		System.out.println(enderecoDao.consultarClientesCriteria(null,null , "Rua Tal 255"));
 
 		entityManager.getTransaction().commit();
 
