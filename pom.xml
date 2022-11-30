@@ -6,8 +6,24 @@
 	<artifactId>rasfood</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>rasfood</name>
+	
+	  <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <release>17</release>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
 
 	<dependencies>
+	
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
